@@ -5,7 +5,7 @@ CREATE TABLE User (
     email VARCHAR (30) UNIQUE,
     password_hash VARCHAR(30),
     phone_number VARCHAR (15),
-    role ENUM (guest, host, admin),
+    role ENUM ('guest', 'host', 'admin'),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -39,7 +39,7 @@ CREATE TABLE Payment(
     booking_id INT,
     amount DECIMAL,
     payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    payment_method ENUM (credit_card, paypal, stripe),
+    payment_method ENUM ('credit_card', 'paypal', 'stripe'),
     Foreign Key(booking_id) references Booking(booking_id)
 
 );
@@ -55,7 +55,7 @@ CREATE TABLE Review(
     Foreign Key(user_id) references User(user_id)
 );
 
-CREATE TABLE Message(
+CREATE TABLE Messages(
     message_id INT Primary Key,
     sender_id INT,
     recipient_id INT,
