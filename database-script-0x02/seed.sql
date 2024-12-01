@@ -5,7 +5,12 @@ INSERT INTO USER VALUES (
 
 INSERT INTO USER VALUES (
     2, 'Ajani', 'Rahmah', 'rahmah7@gmail.com',
-     'ArikeMide24', '07051448898', 'host', '2022-12-45 8:00'
+     'ArikeMide24', '07051448898', 'host', '2022-12-08 8:00'
+);
+
+INSERT INTO USER VALUES (
+    3, 'Balogun', 'Semeton', 'semeton@gmail.com',
+     'ArikeMide24', '07051448897', 'guest', '2022-12-09 8:00'
 );
 
 
@@ -21,6 +26,12 @@ INSERT INTO Property VALUES(2, 1, 'Obalende Luxury',
 '20000', '2023-09-10 14:10', '2024-10-09 22:40'
 );
 
+INSERT INTO Property VALUES(3, 2, 'Palm Avenue Estate', 
+'A perfect place to enjoy light 24/7',
+'124, Isolo Road, Mushin',
+'500000', '2023-09-10 14:10', '2024-10-09 22:40'
+);
+
 
 INSERT INTO Booking VALUES (
     1, 2, 1, '1996-12-09','1996-12-11',
@@ -30,6 +41,12 @@ INSERT INTO Booking VALUES (
 
 INSERT INTO Booking VALUES (
     2, 1, 1, '2008-12-09','2008-12-11',
+    3000000,
+    'confirmed', '2024-12-01 18:50'
+);
+
+INSERT INTO Booking VALUES (
+    3, 2, 3, '2008-12-09','2008-12-11',
     3000000,
     'confirmed', '2024-12-01 18:50'
 );
@@ -57,6 +74,14 @@ INSERT INTO Review VALUES (
     'Not so bad',
     '2024-11-10 23:00'
 );
+
+INSERT INTO Review VALUES (
+    3, 3, 3, 5,
+    'Great property I must say',
+    '2024-10-28 18:00'
+);
+
+
 
 
 INSERT INTO Messages VALUES (
