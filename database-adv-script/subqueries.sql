@@ -18,4 +18,4 @@ WHERE (
     FROM Booking
     WHERE
     Booking.user_id = USER.user_id
-) > 1;
+) > 3;
