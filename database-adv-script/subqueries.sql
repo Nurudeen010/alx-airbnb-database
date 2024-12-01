@@ -14,8 +14,8 @@ WHERE (
 SELECT CONCAT(USER.first_name, ' ', USER.last_name) AS Full_Name
 FROM USER
 WHERE (
-    SELECT AVG(Booking.booking_id)
+    SELECT COUNT(Booking.booking_id)
     FROM Booking
     WHERE
     Booking.user_id = USER.user_id
-) > 3;
+) > 1;
