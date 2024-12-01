@@ -45,10 +45,10 @@ CREATE TABLE Payment(
 );
 
 CREATE TABLE Review(
-    review_id: Primary Key,
+    review_id INT Primary Key,
     property_id INT,
     user_id INT,
-    rating INTEGER CHECK rating >= 1 AND rating <= 5,
+    rating INT CHECK (rating >= 1 AND rating <= 5),
     comment TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     Foreign Key(property_id) references Property(property_id),
